@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #222;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .results-container {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .error {
+            color: red;
+        }
+        .details-list{
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grading Results</h1>
+        <div class="results-container">
+            {{ results | safe }}
+        </div>
+    </div>
+</body>
+</html>

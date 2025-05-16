@@ -1,0 +1,42 @@
+Q.3 (ii)
+Step 1: Start
+Step 2: Input the number N
+Step 3: Initialize an empty stack
+Step 4: Repeat Steps 5 and 6 while N > 0
+Step 5: Extract the last digit of N using digit = N % 10
+Step 6: Push digit onto the stack and update N = N / 10
+[END OF LOOP]
+Step 7: Initialize reversedNum = 0 and place = 1
+Step 8: Repeat Steps 9 and 10 while the stack is not empty
+Step 9: Pop the top element from the stack
+Step 10: Update reversedNum = reversedNum + (popped_digit * place)
+Step 11: Multiply place = place * 10
+[END OF LOOP]
+Step 12: Store reversedNum as the final reversed number
+Step 13: Print reversedNum
+Step 14: End
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 10
+int stk[MAX], top = -1;
+void push(int val) {
+stk[++top] = val;
+}
+int pop() {
+return stk[top--];
+}
+int main() {
+int num, val, i, reversedNum = 0, place = 1;
+printf("\n Enter a number: ");
+scanf("%d", &num);
+while (num > 0) {
+push(num % 10);
+num /= 10;
+}
+while (top != -1) {
+val = pop();
+reversedNum = reversedNum * 10 + val;
+}
+printf("\n Reversed Number: %d\n", reversedNum);
+return 0;
+}

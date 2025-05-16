@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Grading System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #444;
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: calc(100% - 20px);
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .file-upload-section{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment Grading System</h1>
+        <form action="/grade" method="post" enctype="multipart/form-data">
+            <div class="file-upload-section">
+                <label for="question_paper">Question Paper (JPEG/PNG):</label>
+                <input type="file" name="question_paper" id="question_paper" accept=".jpeg, .jpg, .png" required>
+            </div>
+            <div class="file-upload-section">
+                <label for="answer_sheet">Student Answer Sheet (PDF/JPEG/PNG):</label>
+                <input type="file" name="answer_sheet" id="answer_sheet" accept=".pdf, .jpeg, .jpg, .png" required>
+            </div>
+            <div class="file-upload-section">
+                <label for="answer_key">Answer Key (PDF/JPEG/PNG):</label>
+                <input type="file" name="answer_key" id="answer_key" accept=".pdf, .jpeg, .jpg, .png" required>
+            </div>
+            <input type="submit" value="Grade Assignment">
+        </form>
+    </div>
+</body>
+</html>

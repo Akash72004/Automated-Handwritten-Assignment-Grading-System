@@ -1,0 +1,43 @@
+Q.2 i) since the ‘i’ or 2.a’ is not present
+(We can have multiple logics here for Pseudocode, and its not present in the book )
+Part 1 of the answer
+Step 1: IF START = NULL
+Write "UNDERFLOW"
+Go to Step 10
+[END OF IF]
+Step 2: SET PTR = START
+Step 3: Repeat Steps 4 to 7 while PTR != NULL
+Step 4: SET PREPTR = PTRStep 5: SET TEMP = PTR -> NEXT
+Step 6: Repeat while TEMP != NULL
+IF TEMP -> DATA = PTR -> DATA
+SET PREPTR -> NEXT = TEMP -> NEXT
+FREE TEMP
+SET TEMP = PREPTR -> NEXT
+ELSE
+SET PREPTR = TEMP
+SET TEMP = TEMP -> NEXT
+[END OF IF]
+[END OF LOOP]
+Step 7: SET PTR = PTR -> NEXT
+[END OF LOOP]
+Step 8: Go to Sorting Process
+Option 1:
+public void RemoveDuplicates(Node<T> head)
+{
+// Iterate through the list
+Node<T> iter = head;
+while(iter != null)
+{
+// Iterate to the remaining nodes in the list
+Node<T> current = iter;
+while(current!= null && current.Next != null)
+{
+if(iter.Value == current.Next.Value)
+{
+current.Next = current.Next.Next;
+}
+current = current.Next;
+}
+iter = iter.Next;
+}
+}

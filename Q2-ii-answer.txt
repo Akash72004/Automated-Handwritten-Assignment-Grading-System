@@ -1,0 +1,53 @@
+Q.2 (ii)
+Part 1 of answer
+Step 1: IF AVAIL = NULL
+Write OVERFLOW
+Go to Step 11
+[END OF IF]
+Step 2: SET NEW NODE
+AVAIL
+Step 3: SET AVAIL = AVAIL -> NEXT
+Step 4: SET NEW_NODE -> DATA = VAL
+Step 5: SET PTR = START
+Step 6: Repeat Step 7 while PTR -> NEXT != START
+Step 7: PTR = PTR -> NEXT
+[END OF LOOP]
+Step 8: SET NEW_NODE -> NEXT = STARTStep 9: SET PTR -> NEXT = NEW_NODE
+Step 10: SET START = NEW_NODE
+Step 11: EXIT
+Along w code
+struct node *insert_beg(struct node *start)
+{
+struct node *new_node, *ptr;
+int num;
+printf("\n Enter the data : ");
+scanf("%d", &num);
+new_node = (struct node *)malloc(sizeof(struct node)); new_node -> data = num;
+ptr = start;
+while(ptr -> next != start)
+ptr = ptr -> next; ptr -> next = new_node;
+new_node -> next = start; start = new_node; return start;
+}
+Part 2 of answer
+Step 1: IF START = NULL
+Write UNDERFLOW
+Go to Step 8
+[END OF IF]
+Step 2: SET PTR = START
+Step 3: Repeat Steps 4 and 5 while PTR -> NEXT != START
+Step 4: SET PREPTR = PTR
+Step 5: SET PTR = PTR -> NEXT
+[END OF LOOP]
+Step 6: SET PREPTR-> NEXT = START
+Step 7: FREE PTR
+Step 8: EXIT
+Along w code
+struct node *delete_end(struct node *start)
+{
+struct node *ptr, *preptr; ptr = start;
+while(ptr -> next != start) {
+preptr = ptr; ptr = ptr -> next;
+}
+preptr -> next = ptr -> next; free(ptr);
+return start;
+}

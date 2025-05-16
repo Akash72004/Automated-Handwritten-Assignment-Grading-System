@@ -1,0 +1,58 @@
+BIG O NOTATION
+The Big O notation, where O stands for 'order of', is concerned with what happens for very large
+values of n. For example, if a sorting algorithm performs n2 operations to sort just n elements,
+then that algorithm would be described as an o(n2) algorithm.
+If f(n) and g(n) are the functions defined on a positive integer number n, then
+f(n) = O(g(n))
+That is, f of n is Big-0 of g of n if and only if positive constants c and n exist, such that f(n)
+≤cg(n). It means that for large amounts of data, f(n) will grow no more than a constant factor
+than g(n). We have seen that the Big O notation provides a strict upper bound for f(n). This
+means that the function f(n) can do better but not worse than the specified value. Big O notation
+is simply written as f(n) E o(g(n)) or as f(n) = O(g(n)).
+Here, n is the problem size and o(g(n)) = {h(n):
+positive constants c, n, such that 0 ≤ h (n) ≤ cg(n), Vn 2 no). Hence, we can say that o(g(n))
+comprises a set of all the functions h(n) that are less than or equal to cg(n) for all values of n >
+no.
+If f(n) ≤ cg(n), c>0, V n ≥ng, then f(n) = 0(g(n)) and g(n) is an asymptotically tight upper bound
+for f(n).
+Examples of functions in o(n3) include: n2o, n3, n3 +n, 540n3 + 10.
+Best case O describes an upper bound for all combinations of input. It is possibly lower than the
+worst case. For example, when sorting an array the best case is when the array is already
+correctly sorted.
+​
+Worst case O describes a lower bound for worst case input combinations. It is possibly greater
+than the best case. ​
+​
+​OMEGA NOTATION (Ω)
+​The Omega notation provides a tight lower bound for f(n). This means that the function can
+never do better than the specified value but it may do worse.
+notation is simply written as, f(n) E (g(n)), where n is the problem size and (g(n)) (h(n): positive
+constants c>0, n, such that 0≤ cg(n) ≤h(n), nn).
+Hence, we can say that (g(n)) comprises a set of all the functions h(n) that are greater than or
+equal to cg(n) for all values of n 2 n
+If cg(n) ≤ f(n), c>0, Vn 2 no, then f(n) En(g(n)) and g(n) is an asymptotically tight lower bound for
+f(n).
+Examples of functions in (n2) include: n2, n2o, n3 + n2, n3
+To summarize,​
+​Best case describes a lower bound for all combinations of input. This implies that the function
+can never get any better than the specified value. For example, when sorting an array the best
+case is when the array is already correctly sorted.
+• Worst case describes a lower bound for worst case input combinations. It is possibly greater
+than best case. For example, when sorting an array the worst case is when the array is sorted in
+reverse order.
+• If we simply write , it means same as best case N.
+​
+THETA NOTATION (→)
+Theta notation provides an asymptotically tight bound for f(n). ℗ notation is simply written as,
+f(n) (g(n)), where n is the problem size and
+(g(n)) = {h(n): 3 positive constants c,, c,, and n, such that o sc,g(n) ≤ h(n) ≤ c,g(n),
+nn).
+Hence, we can say that (g(n)) comprises a set of all the functions h(n) that are between c,g(n)
+and c2g(n) for all values of n ≥ no.
+If f(n) is between c,g(n) and cg(n),
+n≥n, then f(n) E (g(n)) and g(n) is an asymptotically
+tight bound for f(n) and f(n) is amongst h(n) in the set.
+To summarize,
+• The best case in C notation is not used.
+• Worst case → describes asymptotic bounds for worst case combination of input values.
+• If we simply write C, it means same as worst case C.​
